@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lanka Fresh Mart Dashboard</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div class="layout">
+            <aside class="sidebar" id="sidebar">
+                <div class="logo-area">
+                    <div class="logo-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+                    <span class="logo-text">Lanka Fresh Mart</span>
+                </div>
+                <nav class="nav-links" id="navLinks">
+                    <a href="#" class="active">
+                        <i class="fa-solid fa-chart-line"></i>Dashboard
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-cash-register"></i>Sales
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-file-lines"></i>Reports
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>Settings
+                    </a>
+                </nav>
+            </aside>
+            <div class="main-wrapper">
+                <header class="top-bar">
+                    <button class="hamburger" id="hamburger">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="admin-area">
+                        <i class="fa-solid fa-circle-user"></i>Admin
+                    </div>
+                </header>
+                <main class="dashboard-container">
+                    <section class="kpi-grid">
+                        <div class="kpi-card">
+                            <div class="kpi-inner"><i class="fa-solid fa-dollar-sign"></i>Total Revenue</div>
+                            <div class="kpi-value" id="totalRevenue">-</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-inner"><i class="fa-solid fa-boxes-stacked"></i>Total Units Sold</div>
+                            <div class="kpi-value" id="totalUnits">-</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-inner"><i class="fa-solid fa-calendar"></i>Best Month</div>
+                            <div class="kpi-value" id="bestMonth">-</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-inner"><i class="fa-solid fa-store"></i>Best Branch</div>
+                            <div class="kpi-value" id="bestBranch">-</div>
+                        </div>
+                     </section>
+                     <section class="charts-grid">
+                        <div class="chart-card">
+                            <h3>Monthly Revenue (LKR '000)</h3><canvas id="lineChart"></canvas>
+                        </div>
+                        <div class="chart-card"><h3>Q2 Revenue by Branch (LKR'000)</h3><canvas id="barChart"></canvas></div>
+                     </section>
+                </main>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
